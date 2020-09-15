@@ -1,0 +1,83 @@
+## 1.javascript的组成
+
+![JavaScript的组成](/Users/kai/Documents/JavaScript的组成.png)
+
+## 2.JavaScript在页面引入的三种方式
+
+```javascript
+//第一种
+<script type="text/javascript">
+ 	console.log("hello,world!")
+</script>
+
+//第二种
+<script type="text/javascript" src="js文件地址">
+ 	</script>
+
+//第三种直接在页面中输入script,不推荐使用(容易遗忘，忘记代码写在哪里了，后期维护困难！！！)
+<input type="text" onclick="<javascript:console.log("hello,world!")>">
+```
+
+## 3.javascript变量的命名
+
+1.var 开头定义一个变量,尽量不要使用危险命名，比如使用html的标签名来命名
+
+2.js是一个弱类型的语言，命名的时候无须定义数据类型,赋值的时候决定变量的类型
+
+```javascript
+var num=10;
+```
+
+
+
+## 4.JavaScript的变量类型
+
+1.Number类型 
+
+2.Boolean类型
+
+3.String类型
+
+4.Undefined类型
+
+5.Object类型
+
+6.null 表示空对象，一般为对象初始化
+
+查看对象的类型：typeof()
+
+```javascript
+var num=10;
+var num=true;
+//typeof 检测num变量的类型，其他以此类推,支持变量从新定义
+alert(typeof(num));
+```
+
+5.几个常用的类型转换函数
+
+```javascript
+// parseInt 将字符串转换成整数
+// parseFloat 将字符串转换成浮点数 
+// 神奇的地方
+
+var mynum="15";
+alert(typeof mynum);
+//输出结果
+Number
+
+var mynum1="15a";
+alert(parseInt(mynum1));
+//输出结果
+15
+
+var mynum2="1a5";
+alert(parseInt(mynum));
+//输出结果
+1
+
+var mynum3="a15";
+alert(parseInt(mynum));
+//输出结果
+Non(not a num) 一个非数字
+```
+
